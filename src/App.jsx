@@ -36,9 +36,9 @@ function App() {
 
   return (
     <>
-      <h1 className='title'>E-COMMERCE</h1>
+      <h1 className='title'>Tienda De Practica Reducer</h1>
       <hr />
-      <h2 className='subtitle_products'>Products in Stock</h2>
+      <h2 className='subtitle_products'>Productos Disponibles</h2>
       <div className='container_grid_products'>
         {
           state.products.map((product) => {
@@ -48,14 +48,14 @@ function App() {
       </div>
 
       <hr />
-      <h2 className='subtitle_shopping_cart'>Shopping Cart</h2>
+      <h2 className='subtitle_shopping_cart'>Carrito de Compras</h2>
       <div className='container_buttons'>
-        <button className='btn btn_totalPrice' onClick={() => calculateTotalPriceOfCart()}>Total Price</button>
-        {state.totalPriceShoppingCart > 0 && <p className='totalPrice_shoppingCart'>Total Price: {state.totalPriceShoppingCart}</p>}
-        <button className='btn btn_ClearCart' onClick={() => clearCart()}>Clear cart</button>
+        <button className='btn btn_totalPrice' onClick={() => calculateTotalPriceOfCart()}>Precio Total</button>
+        {state.totalPriceShoppingCart > 0 && <p className='totalPrice_shoppingCart'>Total a Pagar: {state.totalPriceShoppingCart}</p>}
+        <button className='btn btn_ClearCart' onClick={() => clearCart()}>Vaciar Carrito</button>
       </div>
       {
-        state.cart.length === 0 && <p className='text_NoProductsInCart'>There are no products in the cart</p>
+        state.cart.length === 0 && <p className='text_NoProductsInCart'>No hay nada en el carrito</p>
       }
 
       <div className='container_grid_shopping_cart'>

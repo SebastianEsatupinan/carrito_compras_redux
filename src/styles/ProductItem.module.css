@@ -1,12 +1,28 @@
+/* Estilo para el contenedor padre que contiene todas las cartas de productos */
+.container_products {
+  display: flex;
+  justify-content: space-around; /* Alinea los elementos uniformemente y agrega espacio entre ellos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay espacio suficiente */
+  padding: 20px; /* Agrega algo de espacio alrededor de los elementos para evitar que toquen los bordes del contenedor */
+}
+
 .container_product {
-  width: auto;
-  height: 150px;
+  width: 180px; /* Ajusta este valor según el tamaño deseado para cada tarjeta */
+  min-height: 150px;
   background-color: #EEF1F3;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Asegura un poco de espacio entre las tarjetas */
+  transition: transform 0.3s;
+}
+
+.container_product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btnProduct {
@@ -19,4 +35,14 @@
   background-color: #2569C3;
   color: white;
   font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btnProduct:hover {
+  background-color: #1e50a2;
+  transform: scale(1.05);
+}
+
+h2, p {
+  text-align: center; /* Alinea el texto al centro para un aspecto más ordenado */
 }
