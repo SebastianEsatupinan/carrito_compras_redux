@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import './App.css';
-import ProductItem from './components/ProductItem';
+import ProductItem from './components/Producitem';
 import ShoppingCartProduct from './components/ShoppingCartProduct';
 import { reducerCart, productsInitialState } from './reducers/shoppingCart_reducer';
 import TYPES from './reducers/actionTypes';

@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../styles/ProductItem.module.css';
+import styles from './style.css';
 
-export default function ProductoItem({ data, addToCart, cartQuantity }) {
+export default function ProductoItem({ data, addToCart}) {
   return (
     <div className={styles.container_product}>
       <h2>{data.name}</h2>
